@@ -34,14 +34,16 @@ public class ProxyTest {
                 assertEquals(args.length, 0);
             } else if ("setName".equals(method.getName())) {
                 assertEquals(args.length, 2);
-                assertEquals(args[0], "qianlei");
+                assertEquals(args[0], "qianlei1");
                 assertEquals(args[1], "hello");
             }
             return null;
         });
 
+
         assertNull(instance.getName());
-        instance.setName("qianlei", "hello");
+        instance.setName("qianlei1", "hello");
+        System.out.println(instance.getName());
     }
 
     @Test
